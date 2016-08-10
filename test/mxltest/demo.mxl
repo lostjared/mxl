@@ -1,0 +1,27 @@
+
+
+tag "entry1"
+{
+title = "Welcome  to  freeES online plugin"
+data = " well the freeES is in very early stage of development you can still find all sorts of information about it to keep you busy"
+x = "5"
+y = "5"
+}
+
+
+tag "entry2"
+{
+title = "Welcome  to freeES online plugin help"
+data = "You will find more information in the help files provided with this software"
+x  = "5"
+y = "5"
+
+}
+
+tag "entry3"
+{
+title = "About"
+data = "freeES is a free online open source project  maintained by jared bruni"
+x = "5"
+y = "5"
+}

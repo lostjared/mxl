@@ -1,0 +1,106 @@
+
+
+|--=]QQQQQQQQQQQQQQQQQQQVTQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+Q. ]QQQQQQQQQQQQQQQQQQQQ. mQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+Q. ]QQQQQQV??9QQQ@T??9QT` ?TQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+Q. ]QQQQQ( jw "Q@`_gg,dw  awQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+Q. ]QQQQF .QQ; ]k +$QgmQ. mQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+Q. ]QQQQ[ :QQ; ]m   -?QQ. mQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+Q. ]QQQW[ :QQ; ]Wgs.  3Q. mQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+Q. ]QQQ:h  QQ` jE4WQ; jQ. m@$WQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+!  -""":QL.?! jQk ??`_QQc ?'dQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QmQQQQmQQQQwwmQWQmgygQQQQgwmQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQQQQQQQQQQQQQQ!.aa,-4QB  dQQQQQc )WQQQQQQQQWQQQWQQQWQQQWQQ
+QQQQQQQQQQQQQQQQQF jWWQ/jQQa<QQQQQQf )WQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQQQQQQQQQQQQQf )WQQmmQ???$QW!-"t )WQ@?"!4QQQQQQQQQQQQQQQQQ
+QQQQQQQQQQQQQQQQQL   "Y$QQm; dQ[ <g, )W@`.mc ]QQQQQQQQQQQQQQQQ
+QQQQQQQQQQQQQQQQQQ,     4QQ; dW  jQL )W[ =Qk -QQQQQQQQQQQQQQQQ
+QQQQQQQQQQQQQQQQQQQma,  =QQ; dW  3Qk )W[ -""  WWQQQQQQWQQQWQQQ
+QQQQQQQQQQQQQQQQQ@4QQQm .QQ; dQ  3Qf )W[ =QQQWWQQQQQQQQQQQQQQQ
+QQQQQQQQQQQQQQQQWk-QWQW <QQ; dQc ]Q[ )Wk -QWE:QQQQQQQQQQQQQQQQ
+QQQQQQQQQQQQQQQQQm,-!!`_mQc__|QQ,_=c__]Qa "!=yQQQQQQQQQQQQQQQQ
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQW""!QQQQQQQQQQQQQQQQQQQQW"""Q
+QQQQQQQQQQQQQQQQQWQQQQQQQQQQQQQQQQE .QQQQQQQQQQQQQQQQQQQQQm  Q
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQE :QQQQQQQQQQQQQQQQQQQWQW  Q
+QQQQQQQQQQQQQQQQQQQQQQQQWQQQQQW"  ! :QQ@!^^?QW@"++"4QQQ!  ?  Q
+QQQQQQQQQQQQQQQQWQQQQQQQQQQQQQ[ =Qc .QW' mk )WE<QQ; $Qf _QL  Q
+QQQQQQQQQQQQQQQQQQQQQQQWQQQQQQ` ]Qk :QF .Qm  $WWBH[ ]Q' ]Wm  Q
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ. jQE :Qf  |+..dD`.a, ]Q; ]WW  Q
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ; ]QE .QL  QQQQQ[ jW[ ]Q( ]WB  Q
+QQQQQQQQQQQQQQQQQQQQQWQQQQQQQQL +W[ :QQ. $Q@.Q[ ]B' ]Qk -Wf  Q
+QQQQQQQQQQQQQQQQWQQQQQQQQQQQQQQa,_w_a<Qg,-"<yQm, _c_=jQw,_w_a_
+[                                                            ]
+[                                                            ]
+[                                                            ]
+[   Library Title:  libmxl libmasc                           ]
+[                                                            ]
+[   svn co svn://lostsidedead.com/mxl                        ]
+[                                                            ]
+[____________________________________________________________]
+
+
+for MXL documentation visit: http://lostsidedead.biz/libmxl
+
+This source code is open source, and is licensed under the GNU GPL.
+Only restrction is if you use it , you sould share you code to.
+MXL is like a toned down XML for  programs that need a small lib
+and dynamic interactive data files.
+since my program dosent
+need anything fancy I thought i would just code code something to
+meet the needs of the  application in question. It basicly breaks
+a source file  down into a series of data types that can be used
+with the program. Syntax is simple and is perfect for my app.
+Its all a learning experience for me. 
+
+At first glance code seems to work, more testing should be done.
+
+Compile Instructions:
+
+First insure you have the automake and friends utils installed
+and in your path.
+
+then cd to the directory of the extracted files, or the downloaded files from a svn checkout 
+first we must compile masc since mxl relies on it.
+
+if your using a unix like OS, or cygwin.
+
+$ cd libmasc
+$ chmod +x autogen.sh
+$ ./autogen.sh
+$ ./configure
+$ make
+$ sudo make install
+
+
+$ chmod +x autogen.sh
+$ ./autogen.sh
+$ ./configure
+$ make
+$ sudo make install
+
+$ sudo ldconfig -v
+
+
+if your cross compiling with mingw  on Linux you will have to change the code for the configuration of 
+MXL a little bit. you would have to do the same for libmasc if you were using mingw for Linux as well.
+
+$ chmod +x autogen.sh
+$ ./autogen.sh
+
+
+$ CXXFLAGS="-I/usr/local/i586-mingw32/include" LDFLAGS="-L/usr/local/i586-mingw32/lib" ./configure --prefix=/usr/local/i586-mingw32 --host=i586-mingw32msvc \
+--target=i586-mingw32msvc
+
+$ make
+$ sudo make install
+
+
+Note: updated the code, now also produces shared librarys instead of just a static lib
+
+after you have completed the above steps
+you can try compiling the test examples.
+located in the test directory
+
+
+- jared
+

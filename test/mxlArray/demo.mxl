@@ -1,0 +1,25 @@
+tag "id"
+{
+
+value1 = "two"
+value2 = "three"
+value3 = "threeZ"
+}
+
+
+tag "Title"
+{
+
+window_width = "10"
+window_height = "10"
+size_of = "15"
+
+tag "member"
+{
+
+lost = "one"
+
+
+}
+
+}

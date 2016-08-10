@@ -1,0 +1,14 @@
+
+
+# equal equal tag stands for tag to point to function
+
+tag "OutputTag" {
+
+
+Type = "Print"
+text = "hello world"
+
+print == "print_tag"
+
+
+}
